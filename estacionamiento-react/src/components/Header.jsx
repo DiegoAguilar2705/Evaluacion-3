@@ -1,8 +1,8 @@
 function Header() {
   return (
-    <header>
-      <h1>Sistema de Gestión de Estacionamientos</h1>
-      <p>Proyecto realizado con React y Vite</p>
+    <header className="header">
+      <h1>Sistema de Estacionamientos</h1>
+      <p>Registro de ingreso y salida de vehículos</p>
     </header>
   )
 }

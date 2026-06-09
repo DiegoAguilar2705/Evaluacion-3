@@ -1,7 +1,7 @@
 function Footer() {
   return (
-    <footer>
-      <p>Evaluación Front End - React</p>
+    <footer className="footer">
+      <p>Diego Aguilar - Programación Front End</p>
     </footer>
   )
 }

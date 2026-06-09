@@ -1,15 +1,27 @@
 function CardVehiculo({ vehiculo, eliminarVehiculo }) {
   return (
-    <article className={vehiculo.permanente ? 'card permanente' : 'card'}>
+    <article className={vehiculo.permanente ? 'card permanente' : 'card temporal'}>
       <h3>{vehiculo.patente}</h3>
 
-      <p>Conductor: {vehiculo.conductor}</p>
-      <p>Tipo: {vehiculo.tipo}</p>
+      <p>
+        <strong>Conductor:</strong> {vehiculo.conductor}
+      </p>
 
-      {vehiculo.permanente && <p>Cliente permanente</p>}
+      <p>
+        <strong>Tipo:</strong> {vehiculo.tipo}
+      </p>
 
-      <button onClick={() => eliminarVehiculo(vehiculo.patente)}>
-        Eliminar
+      <p>
+        <strong>Ingreso:</strong> {vehiculo.fechaIngreso}
+      </p>
+
+      <p>
+        <strong>Estado:</strong>{' '}
+        {vehiculo.permanente ? 'Permanente' : 'Temporal'}
+      </p>
+
+      <button className="btn-eliminar" onClick={() => eliminarVehiculo(vehiculo.patente)}>
+        Retirar
       </button>
     </article>
   )
